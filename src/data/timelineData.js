@@ -11,7 +11,11 @@ export const timelineData = [
       
       <p><strong>Hitos importantes:</strong></p>
       <ul style="margin-left: 20px; color: #b0b0b0;">
-        <li><strong>1958:</strong> Primer videojuego gráfico (Tennis for Two)</li>
+        <li><strong>1958:</strong> Primer videojuego gráfico (Tennis for Two)
+            <iframe src="https://www.youtube.com/embed/6QYNlPLzj90" frameborder="0" allowfullscreen style="width: 100%; height: 400px; border-radius: 10px; margin: 20px 0; border: 2px solid rgba(0, 255, 245, 0.3);"></iframe>
+      
+        
+        </li>
         <li><strong>1963:</strong> Ivan Sutherland crea Sketchpad, primer sistema CAD</li>
         <li><strong>1968:</strong> Primera animación 3D por computadora</li>
         <li><strong>1970:</strong> Primeros algoritmos de sombreado (Phong, Gouraud)</li>
