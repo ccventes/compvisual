@@ -10,7 +10,7 @@ export const conceptsData = {
       content: `
         <p><strong>Definición:</strong> Un pixel (picture element) es la unidad mínima de información visual en una imagen digital. La resolución determina cuántos pixels existen en un área determinada.</p>
         
-        <img src="https://via.placeholder.com/800x400/0a0e27/00fff5?text=Comparación+de+Resoluciones:+720p+vs+1080p+vs+4K" alt="Resoluciones">
+        <img src="https://www.researchgate.net/profile/Enrique-Ramon-Balmaseda/publication/277155032/figure/fig8/AS:352191366877202@1460980373891/Figura-28-Matriz-de-una-imagen-Ejemplo-de-descriptor-basado-en-pixeles.png" alt="Resoluciones">
         
         <p><strong>Conceptos clave:</strong></p>
         <ul style="margin-left: 20px; color: #b0b0b0;">
@@ -19,8 +19,14 @@ export const conceptsData = {
           <li>4K UHD: 3840×2160 pixels</li>
           <li>A mayor resolución, mayor detalle y calidad</li>
         </ul>
+
+        <p><strong>Modelos de Color</strong></p>
+        <img src="http://15462.courses.cs.cmu.edu/fall2017content/article_images/11_1.jpg" alt="Modelos de color">
         
-        <p style="margin-top: 20px;"><em>Reemplaza esta imagen con ejemplos reales de diferentes resoluciones.</em></p>
+
+        
+        
+        
       `
     },
     {
@@ -119,7 +125,7 @@ export const conceptsData = {
       content: `
         <p><strong>Definición:</strong> La iluminación simula cómo la luz interactúa con objetos y superficies, creando atmósfera y realismo.</p>
         
-        <iframe src="https://www.youtube.com/embed/j-O4xEJybF8" frameborder="0" allowfullscreen style="width: 100%; height: 400px; border-radius: 10px; margin: 20px 0; border: 2px solid rgba(0, 255, 245, 0.3);"></iframe>
+        <iframe src="https://www.youtube.com/embed/VnG2gOKV9dw" frameborder="0" allowfullscreen style="width: 100%; height: 400px; border-radius: 10px; margin: 20px 0; border: 2px solid rgba(0, 255, 245, 0.3);"></iframe>
         
         <p><strong>Tipos de luz:</strong></p>
         <ul style="margin-left: 20px; color: #b0b0b0;">
@@ -127,7 +133,7 @@ export const conceptsData = {
           <li><strong>Puntual:</strong> Emite desde un punto en todas direcciones</li>
           <li><strong>Spot:</strong> Cono de luz direccional</li>
           <li><strong>Área:</strong> Luz que emite desde una superficie</li>
-          <li><strong>HDRI:</strong> Iluminación basada en imagen 360°</li>
+          
         </ul>
       `
     },
