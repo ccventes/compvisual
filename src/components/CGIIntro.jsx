@@ -1,17 +1,28 @@
 
 import Carousel from './Carousel';
 import SpinalStage from '../assets/sesion1/images/kispinal.gif';
+import spduck from '../assets/sesion1/images/duck.jpg';
+import brunos from '../assets/sesion1/images/brunos.png'
 
 export default function CGIIntro() {
   const carouselItems = [
 
     {
-      type: 'image',
+       type: 'gif',
       src: SpinalStage,
+      thumbnail: spduck,
       title: '¿Se mueven los personajes a traves de la plataforma? NO!',
       buttonText: null,
-      buttonLink: '#',
       showButton: false
+    },
+
+    {
+      type: 'image',
+      src: brunos ,
+      title: '3D Graphics on websites',
+      buttonText: 'Explorar',
+      buttonLink: 'https://bruno-simon.com/',
+      showButton: true
     },
 
 

@@ -1,3 +1,4 @@
+// components/Timeline.jsx
 import TimelineItem from './TimelineItem';
 import { timelineData } from '../data/timelineData';
 

@@ -1,3 +1,4 @@
+// components/Trends.jsx
 import TrendCard from './TrendCard';
 import { trendsData } from '../data/trendsData';
 

@@ -1,3 +1,4 @@
+// components/ConceptCard.jsx
 export default function ConceptCard({ concept, onClick }) {
   return (
     <div className="concept-card" onClick={onClick}>

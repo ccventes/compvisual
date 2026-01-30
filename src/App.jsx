@@ -14,6 +14,7 @@ function App() {
   const [currentSession, setCurrentSession] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [modalContent, setModalContent] = useState(null);
+  const [showBackButton, setShowBackButton] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,13 @@ function App() {
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       setScrollProgress(scrolled);
+
+      // Show button only at top (0-10%) or bottom (90-100%)
+      if (scrolled <= 5 || scrolled >= 90) {
+        setShowBackButton(true);
+      } else {
+        setShowBackButton(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -53,7 +61,10 @@ function App() {
       <div className="bg-grid"></div>
       <div className="scroll-indicator" style={{ width: `${scrollProgress}%` }}></div>
 
-      <button className="back-to-menu-btn" onClick={() => setCurrentSession(null)}>
+      <button 
+        className={`back-to-menu-btn ${showBackButton ? 'visible' : 'hidden'}`}
+        onClick={() => setCurrentSession(null)}
+      >
         <span className="back-arrow">←</span>
         <span className="back-text">Volver al Menú</span>
       </button>

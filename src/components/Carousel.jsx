@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 export default function Carousel({ items }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [gifStates, setGifStates] = useState({});
 
   const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
@@ -16,7 +17,15 @@ export default function Carousel({ items }) {
     setCurrentIndex(index);
   };
 
+  const toggleGif = (index) => {
+    setGifStates(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   const currentItem = items[currentIndex];
+  const isGifPlaying = gifStates[currentIndex] || false;
 
   return (
     <div className="carousel-container">
@@ -34,6 +43,25 @@ export default function Carousel({ items }) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
+            </div>
+          ) : currentItem.type === 'gif' ? (
+            <div className="carousel-media gif-container" onClick={() => toggleGif(currentIndex)}>
+              <img 
+                src={isGifPlaying ? currentItem.src : currentItem.thumbnail} 
+                alt={currentItem.title}
+                className="gif-image"
+              />
+              {!isGifPlaying && (
+                <div className="gif-play-overlay">
+                  <div className="play-icon">▶</div>
+                  <p className="play-text">Click para reproducir</p>
+                </div>
+              )}
+              {isGifPlaying && (
+                <div className="gif-pause-overlay">
+                  <div className="pause-icon">⏸</div>
+                </div>
+              )}
             </div>
           ) : (
             <div className="carousel-media">

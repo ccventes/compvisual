@@ -31,6 +31,3 @@ export default function ConceptsSection({ openModal }) {
     </section>
   );
 }
-
-// components/ConceptCard.jsx
-
